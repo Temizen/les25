@@ -116,9 +116,7 @@ body {
   text-align: left;
 }
 
-.formtable{
-  max-width: fit-content;
-  min-width: fit-content;
+.formtable {
   margin-left: auto;
   margin-right:auto;
   margin-top: 1rem;
