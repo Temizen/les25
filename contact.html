@@ -47,15 +47,15 @@
           <table class="formtable">
             <tr>
               <td class="formcell"><label for="vnaam">Voornaam:</label></td>
-              <td><input type="text" id="vnaam" maxlength="20" name="voornaam"></td>
+              <td><input type="text" id="vnaam" maxlength="10" name="voornaam" required></td>
             </tr>
             <tr>
               <td class="formcell"><label for="anaam">Achternaam:</label></td>
-              <td><input type="text" id="anaam" maxlength="20" name="achternaam"> </td>
+              <td><input type="text" id="anaam" maxlength="20" name="achternaam" required> </td>
             </tr>
             <tr>
               <td class="formcell"><label for="leeftijd">Leeftijd:</label></td>
-              <td><input type="number" id="leeftijd" name="leeftijd"></td>
+              <td><input type="number" id="leeftijd" name="leeftijd" min="1" max="99" required></td>
             </tr>
             <tr>
               <td colspan="2" class="formcell button"><input type="button" id="knop" name="knop" value="Verzenden">
