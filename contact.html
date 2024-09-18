@@ -1,47 +1,93 @@
 <!DOCTYPE html>
 <html lang="nl">
-    <head>
-        <meta charset="utf-8">
-        <meta name="author" content="Veridian ©2024">
-        <meta name="description" content="Huiswerk les 25 NHA - Jquerry">
-        <meta name="keywords" content="NHA,Les 25, Huiswerk, Jquerry">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Les 25 Jquerry</title>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-    </head>
-    <body>
-        <header>
-            <div class="row headerdiv maincolor">
-                <div class="col-4 headertitle"><h1>Mijn Pagina</h1></div>
-                <div class="col-4 navbar">
-                    <ul class="navlist">
-                        <li class="nav"><a href="#">Home</a></li>
-                        <li class="nav"><a href="#">Over Mij</a></li>
-                        <li class="nav"><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-        <main>
-            <div class="row">
-                <div class="col-6 subheader secondarycolor"><h2>Contact Formulier</h2></div>
-                <div class="col-6 contentbox"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae porro temporibus, possimus enim quibusdam deserunt at aliquid, sit voluptas molestiae, maiores culpa ut ea vel similique odit itaque voluptates dolor?</p>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-6 subheader secondarycolor"><h2>Contact Formulier</h2></div>
-                <div class="col-6 contentbox"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae porro temporibus, possimus enim quibusdam deserunt at aliquid, sit voluptas molestiae, maiores culpa ut ea vel similique odit itaque voluptates dolor?</p>
-                </div>
-            </div>
-            <!-- JS -->
-            <script type="text/JavaScript" href="js/main.js"></script>
-            <noscript>
-                Om deze website optimaal te gebruiken is het noodzakelijk JavaScript te activeren.
-            </noscript>
-        </main>
-        <footer class="footerdiv maincolor">
-            <p class="copyright">©Veridian 2024</p>
-        </footer>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Veridian ©2024">
+  <meta name="description" content="Huiswerk les 25 NHA - Jquerry">
+  <meta name="keywords" content="NHA,Les 25, Huiswerk, Jquerry">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les 25 Jquerry</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="row headerdiv maincolor">
+      <div class="col-4 headertitle">
+        <h1>Mijn Pagina</h1>
+      </div>
+      <div class="col-7 navbar">
+        <ul class="navlist">
+          <li class="nav"><a href="#">Home</a></li>
+          <li class="nav"><a href="#">Over Ons</a></li>
+          <li class="nav"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="row">
+      <div class="col-5 subheader secondarycolor">
+        <h2>Heeft u vragen of opmerkingen?</h2>
+      </div>
+      <div class="col-5 contentbox">
+        <p>
+          Hieronder volgt een formulier die een waarde terug geeft wanneer u de
+          velden invult.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-5 subheader secondarycolor">
+        <h2>Formulier</h2>
+      </div>
+      <div class="col-5 contentbox">
+        <form>
+          <table class="formtable">
+            <tr>
+              <td class="formcell"><label for="vnaam">Voornaam:</label></td>
+              <td><input type="text" id="vnaam" maxlength="20" name="voornaam"></td>
+            </tr>
+            <tr>
+              <td class="formcell"><label for="anaam">Achternaam:</label></td>
+              <td><input type="text" id="anaam" maxlength="20" name="achternaam"> </td>
+            </tr>
+            <tr>
+              <td class="formcell"><label for="leeftijd">Leeftijd:</label></td>
+              <td><input type="number" id="leeftijd" name="leeftijd"></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="formcell button"><input type="button" id="knop" name="knop" value="Verzenden">
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+      </script>
+    <script>
+      $(document).ready(function () {
+        $('#knop').click(function () {
+          var voornaam = $("#vnaam").val();
+          var achternaam = $("#anaam").val();
+          var leeftijd = $("#leeftijd").val();
+          window.alert(
+            "Uw naam is: " + voornaam + " " + achternaam + " en uw leeftijd is " + leeftijd + " jaar");
+        });
+      });
+    </script>
+    <noscript>
+      Om deze website optimaal te gebruiken is het noodzakelijk JavaScript te
+      activeren.
+    </noscript>
+  </main>
+  <footer class="footerdiv maincolor">
+    <p class="copyright">©Veridian 2024</p>
+  </footer>
+</body>
+
 </html>
